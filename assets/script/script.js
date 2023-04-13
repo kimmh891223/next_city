@@ -1,3 +1,5 @@
+var getCity;
+
 function getCity() {
   var search = 'https://api.teleport.org/api/urban_areas';
 
@@ -19,3 +21,5 @@ function getCity() {
 }
 
 getCity();
+
+document.getElementById("randomCity").innerHTML = "You will visit" + " " + getCity;
