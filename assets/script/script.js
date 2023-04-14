@@ -1,5 +1,6 @@
 var h1Name = document.getElementById('city-name');
 var imgCity = document.getElementById('city-image');
+var spinButton = document.getElementById('spin-btn');
 
 // get random city from api
 function getCity() {
@@ -55,4 +56,6 @@ function getCityImage(city) {
     imgCity.src = cityImage;
   })
 }
+
+spinButton.addEventListener('click', getCity)
 getCity();
