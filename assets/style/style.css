@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+}
+
+.resultImg{
+    animation-name: resultLoad;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes resultLoad {
+    0% {
+        transform: scale(1.0);
+    }
+    80% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
