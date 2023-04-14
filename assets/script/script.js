@@ -15,7 +15,6 @@ function getCity() {
   .then (function (data) {
     var cityList = data._links['ua:item'];
     var random = Math.floor(Math.random()* cityList.length)
-    console.log(cityList[random])
     var cityDetails = cityList[random].href;
     var cityName = cityList[random].name;
     h1Name.textContent = cityName;
@@ -50,8 +49,6 @@ function getCityImage(city) {
     return response.json();
   })
   .then (function (data) {
-    // console.log(data)
-    console.log(data.photos[0].image.web)
     var cityImage = data.photos[0].image.web;
     imgCity.src = cityImage;
   })
