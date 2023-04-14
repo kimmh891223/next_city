@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="./assets/style/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="style" href="./assets/style/style.css">
+    </link>
 </head>
+
+
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
+    <header class="container">
+        <h1>Weather Information</h1>
+    </header>
+
+    <body>
 
 
-    </div>
-  </div>
-</nav>
+        <main class="container dashboard">
+            <div class="row p-2">
+                <div class="col-sm-12 col-md-9 order-md-2"></div>
+            </div>
 
-<section>
-<div id="hero">
-  <div class="hero-text">
-    <h1 style="font-size:50px">random</h1>
-  </div>
-</div>
-</section>
+            <div class="row">
+                <!-- Side search bar -->
+                <aside class="col-4 left-panel order-md-1">
+                    <!-- <form> -->
+                    <div class="form-row">
+                        <div class="form-group col-8">
+                            <label for="city-input"><b>Search for a City:</b></label>
+                            <input type="text" class="form-control" id="city-input" placeholder="San Diego">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary btn-lg btn-block" id="search-btn">Search<i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                </aside>
+            </div>
+            <!-- </form> -->
 
-<section id="randomize">
-  <a class="btn btn-primary" href="/random.html" role="button">Random</a>
-</section>
-  
-<div id="randomCity"></div>
+            <div class="row recent-searches  mt-3">
+                <div class="col-sm-12">
+                </div>
+            </div>
 
-<div class="container text-center">    
-  <h3>What We Do</h3><br>
-  <div class="row">
-    <div class="col-12" class="intro">text</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>info 1</p>
-    </div>
-    <div class="col-sm-12 col-md-6"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>info 2</p>    
-    </div>
-  
+            <!-- Current city Daily weather forecast -->
+            <div class="col-8">
+                <div class="col-12 currentWeather p-0">
+                    <div class="d-flex cityName">
+                        <h2 id="city"></h2>
+                        <h3 id="date"></h3>
+                        <img id="weather-icon" />
+                    </div>
+                    <p class="pt-1 pl-2">Temp: <span id="temperature"></span>&deg:F</p>
+                    <p class="pl-2">Wind: <span id="wind"></span>MPH </p>
+                    <p class="pl-2">Humidity: <span id="humidity"></span>%</p>
+                </div>
+            </div>
+        </main>
+        <script src="./assets/script/script.js"></script>
+    </body>
 
-  </div>
-</div><br>
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
-<!-- <script src="/assets/script/script.js"></script> -->
-</body>
 </html>
