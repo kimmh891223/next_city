@@ -22,15 +22,29 @@ var getWeatherInfo = function (searchValue) {
 
                     console.log(data)
 
+                    var Des = document.createElement("h5")
+                    document.getElementById("Des").innerHTML = "";
+                    Des.textContent = data.weather[0].description
+                    document.getElementById("Des").append(Des)
+
+
                     var temp = document.createElement("h5")
+                    document.getElementById("temperature").innerHTML = "";
                     temp.textContent = data.main.temp
                     document.getElementById("temperature").append(temp)
 
+                    var Feels = document.createElement("h5")
+                    document.getElementById("feels_like").innerHTML = "";
+                    Feels.textContent = data.main.feels_like
+                    document.getElementById("feels_like").append(Feels)
+
                     var wind = document.createElement("h5")
+                    document.getElementById("wind").innerHTML = "";
                     wind.textContent = data.wind.speed
                     document.getElementById("wind").append(wind)
 
                     var humid = document.createElement("h5")
+                    document.getElementById("humidity").innerHTML = "";
                     humid.textContent = data.main.humidity
                     document.getElementById("humidity").append(humid)
 

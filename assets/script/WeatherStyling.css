@@ -1,0 +1,27 @@
+.leftside,
+.rightside {
+    height: 100vh;
+    width: 100%;
+}
+
+.leftside {
+
+    background-color: bisque;
+
+}
+
+div.form:hover {
+    transform: scale(1.5)
+}
+
+.rightside {
+    background-color: aquamarine;
+}
+
+#temperature,
+#humidity,
+#wind,
+#feels_like,
+#Des {
+    display: inline-block;
+}
