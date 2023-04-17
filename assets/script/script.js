@@ -27,6 +27,7 @@ function getCity() {
 
     // Set city image to webpage
     getCityImage(cityDetails);
+    getCityInfo(cityDetails);
 
     // adding city location to local storage
     var cityStorage = getStorage();
@@ -43,8 +44,7 @@ function getCity() {
 }
 
 // get City Details of select city
-function getCityDetails(city) {
-  city +='details';
+function getCityInfo(city) {
   fetch(city)
   .then (function (response) {
     if(!response) {
@@ -53,9 +53,30 @@ function getCityDetails(city) {
     return response.json();
   })
   .then (function (data) {
-    // console.log(data)
+    // var name = data.full_name;
+    // var result = name.split(', ')[1];
+    // console.log(result);
+
+    var country = data._links['ua:countries'][0].name;
+    console.log(country);
+
   })
 }
+
+// get City Details of select city
+// function getCityDetails(city) {
+//   city +='details';
+//   fetch(city)
+//   .then (function (response) {
+//     if(!response) {
+//       throw response.json();
+//     }
+//     return response.json();
+//   })
+//   .then (function (data) {
+//     console.log(data)
+//   })
+// }
 
 // get city image of select city
 function getCityImage(city) {
