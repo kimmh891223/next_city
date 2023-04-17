@@ -15,11 +15,11 @@ function getCity() {
   })
   .then (function (data) {
 
-    // city array / list of cities
+    // city array/ list of cities
     var cityList = data._links['ua:item'];
+    var random = Math.floor(Math.random()* cityList.length);
 
     // random city selected
-    var random = Math.floor(Math.random()* cityList.length);
     var cityDetails = cityList[random].href;
 
     // Set city name to webpage
@@ -27,6 +27,7 @@ function getCity() {
 
     // Set city image to webpage
     getCityImage(cityDetails);
+    getCityInfo(cityDetails);
 
     // adding city location to local storage
     var cityStorage = getStorage();
@@ -43,9 +44,8 @@ function getCity() {
 }
 
 // get City Details of select city
-function getCityDetails(cityURL) {
-  cityURL +='details';
-  fetch(cityURL)
+function getCityInfo(city) {
+  fetch(city)
   .then (function (response) {
     if(!response) {
       throw response.json();
@@ -53,14 +53,35 @@ function getCityDetails(cityURL) {
     return response.json();
   })
   .then (function (data) {
-    // console.log(data)
+    // var name = data.full_name;
+    // var result = name.split(', ')[1];
+    // console.log(result);
+
+    var country = data._links['ua:countries'][0].name;
+    console.log(country);
+
   })
 }
 
+// get City Details of select city
+// function getCityDetails(city) {
+//   city +='details';
+//   fetch(city)
+//   .then (function (response) {
+//     if(!response) {
+//       throw response.json();
+//     }
+//     return response.json();
+//   })
+//   .then (function (data) {
+//     console.log(data)
+//   })
+// }
+
 // get city image of select city
-function getCityImage(cityURL) {
-  cityURL +='images';
-  fetch(cityURL)
+function getCityImage(city) {
+  city +='images';
+  fetch(city)
   .then (function (response) {
     if(!response) {
       throw response.json();
@@ -108,11 +129,11 @@ function renderCityStorage() {
   // loops through each array element and renders to page
   for(var i = 0; i < cities.length; i++) {
 
-    // Creates a 'list' and 'a' tag elemenets
+    // Creates a list and a tag elemenets
     var li = document.createElement('li');
     var a = document.createElement('a');
 
-    // adds the api city url to a dataset on the elemenet /  sets the text in element to city name
+    // adds the api city url to a dataset on the elemenet/  sets the text in element to city name
     a.dataset.URL = cities[i].cityURL;
     a.textContent = cities[i].name;
 
