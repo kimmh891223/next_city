@@ -1,4 +1,4 @@
-
+// code for spin animation
 
 var buttonEl = document.querySelector("#spinMe");
 
@@ -121,3 +121,19 @@ buttonEl.addEventListener("click", function(){
 
   setTime();
 })
+
+
+fetch('https://booking-com.p.rapidapi.com/v1/hotels/reviews-filter-metadata?locale=en-gb&hotel_id=1676161', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+
+var requestUrl = 'https://booking-com.p.rapidapi.com/v1/hotels/reviews-filter-metadata?locale=en-gb&hotel_id=1676161'
+  console.log(requestUrl);
+  fetch(requestUrl)
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data) {
+      })
