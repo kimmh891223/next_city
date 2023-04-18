@@ -15,19 +15,18 @@
 
 
 <body>
-
-
     <main class="row">
         <!-- right side of the page - weather Information -->
         <div class="col">
             <h5>Weather Information</h5>
-            <div class="leftside d-flex justify-content-center align-items-center">
+            <div class="leftside d-flex">
+                <!-- Search bar -->
                 <div class="form">
                     <label for="city-input"><b>Search for a City:</b></label>
                     <input type="text" class="form-control" id="city-input" placeholder="San Diego">
                     <button class="btn btn-primary btn-lg btn-block" id="search-btn">Search<i
                             class="fas fa-search"></i></button>
-
+                    <!-- Current Weather Information -->
                     <div class="city">
                         <div class="currentWeather p-0">
                             <div class="d-flex cityName">
@@ -45,16 +44,106 @@
                         </div>
                     </div>
                 </div>
+                <div></div>
+                <section class="col-10 fiveDay">
+                    <h2>5-Day Forecast:</h2>
+                    <div class="row forcast">
+
+                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                            <div class="card day-0">
+                                <div class="card-body p-1">
+                                    <p class="card-title" id="date1"></p>
+                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                                    <p class="card-subtitle mb-2 text-muted"> Temp: <span class="fiveDay-temp1"></span>
+                                        &deg;F </p>
+                                    <p class="card-subtitle mb-2 text-muted"> Wind: <span class="fiveDay-wind1"></span>
+                                        MPH </p>
+                                    <p class="card-subtitle mb-2 text-muted"> Humidity: <span
+                                            class="fiveDay-humid1"></span>%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                            <div class="card day-1">
+                                <div class="card-body p-1">
+                                    <p class="card-title" id="date2"></p>
+                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp2"></span>
+                                        &deg;F </p>
+                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind2"></span>
+                                        MPH </p>
+                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
+                                            class="fiveDay-humid2"></span>%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                            <div class="card day-2">
+                                <div class="card-body p-1">
+                                    <p class="card-title" id="date3"></p>
+                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp3"></span>
+                                        &deg;F </p>
+                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind3"></span>
+                                        MPH </p>
+                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
+                                            class="fiveDay-humid3"></span>%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                            <div class="card day-3">
+                                <div class="card-body p-1">
+                                    <p class="card-title" id="date4"></p>
+                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp4"></span>
+                                        &deg;F </p>
+                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind4"></span>
+                                        MPH </p>
+                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
+                                            class="fiveDay-humid4"></span>
+                                        %
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                            <div class="card day-4">
+                                <div class="card-body p-1">
+                                    <p class="card-title" id="date5"></p>
+                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp5"></span>
+                                        &deg;F </p>
+                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind5"></span>
+                                        MPH </p>
+                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
+                                            class="fiveDay-humid5"></span>%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
+        </div>
+        </section>
+        </div>
 
 
 
 
-            <!-- left side of the page- Hotel Information -->
-            <div class="col">
-                <h5>Hotel Information</h5>
-                <div class="rightside d-flex justify-content-center align-items-center">Hotel Information</div>
-            </div>
+
+        <!-- left side of the page- Hotel Information -->
+        <div class="col">
+            <h5>Hotel Information</h5>
+            <div class="rightside d-flex justify-content-center align-items-center">Hotel Information</div>
+        </div>
     </main>
 
     <script src="script.js"></script>

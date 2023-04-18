@@ -10,9 +10,9 @@
 
 }
 
-div.form:hover {
+/* div.city:hover {
     transform: scale(1.5)
-}
+} */
 
 .rightside {
     background-color: aquamarine;
@@ -23,5 +23,23 @@ div.form:hover {
 #wind,
 #feels_like,
 #Des {
+    display: inline-block;
+}
+
+.fiveDay-temp1,
+.fiveDay-wind1,
+.fiveDay-humid1,
+.fiveDay-temp2,
+.fiveDay-wind2,
+.fiveDay-humid2,
+.fiveDay-temp3,
+.fiveDay-wind3,
+.fiveDay-humid3,
+.fiveDay-temp4,
+.fiveDay-wind4,
+.fiveDay-humid4,
+.fiveDay-temp5,
+.fiveDay-wind5,
+.fiveDay-humid5 {
     display: inline-block;
 }
