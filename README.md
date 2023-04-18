@@ -3,7 +3,10 @@ Weather-Information section
 As a Full stack Web Developer, I created a dashboard that allow user to view the weather information upon a random selection of a city.
 
 
+
+
 About
+
 
 Using the selected city, the user is presented with current and forecast weather information.
 
