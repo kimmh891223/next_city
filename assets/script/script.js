@@ -2,6 +2,7 @@ var h1Name = document.getElementById('city-name');
 var imgCity = document.getElementById('city-image');
 var spinButton = document.getElementById('spin-btn');
 var storageContainer = document.getElementsByClassName('storage-container');
+var exploreCityBtn = document.getElementById('explorebtn')
 
 // get random city from api
 function getCity() {
@@ -90,7 +91,6 @@ function setStorage(cities) {
   if (cities.length > 15) {
     cities.shift();
     localStorage.setItem('cities', JSON.stringify(cities));
-    console.log(cities.length)
     return;
   }
   localStorage.setItem('cities', JSON.stringify(cities));
@@ -122,72 +122,49 @@ function renderCityStorage() {
 
   }
 }
-
-spinButton.addEventListener('click', getCity)
-
-getCity();
-
 //Weather 
-
-var cityInputEl = document.querySelector("#city-input")
-var searchButtonEl = document.querySelector("#search-btn")
-var searchValue = cityInputEl.value
-
-searchButtonEl.addEventListener("click", function () {
-    var searchValue = cityInputEl.value
-    console.log(searchValue)
-
-    getWeatherInfo(searchValue)
-    getForecast(searchValue)
-})
-
-
+getWeatherInfo('toronto');
 // current weather information
 var apiKey = 'c36e92a6ba7d753715bfc90e32631c4e';
-var getWeatherInfo = function (searchValue) {
+function getWeatherInfo(searchValue){
     var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${apiKey}&units=imperial`;
-    fetch(apiUrl
-    ).then(function (response) {
-        if (response.ok) {
-            response.json()
-                .then(function (data) {
+    fetch(apiUrl)
+    .then( function (response) {
+      if (!response.ok) {
+        throw response.json();
+      }
+      return response.json();
+      })
+      .then (function (data) {
+        console.log(data)
 
-                    console.log(data)
-
-                    var Des = document.createElement("h5")
-                    document.getElementById("Des").innerHTML = "";
-                    Des.textContent = data.weather[0].description
-                    document.getElementById("Des").append(Des)
-
-
-                    var temp = document.createElement("h5")
-                    document.getElementById("temperature").innerHTML = "";
-                    temp.textContent = data.main.temp
-                    document.getElementById("temperature").append(temp)
-
-                    var Feels = document.createElement("h5")
-                    document.getElementById("feels_like").innerHTML = "";
-                    Feels.textContent = data.main.feels_like
-                    document.getElementById("feels_like").append(Feels)
-
-                    var wind = document.createElement("h5")
-                    document.getElementById("wind").innerHTML = "";
-                    wind.textContent = data.wind.speed
-                    document.getElementById("wind").append(wind)
-
-                    var humid = document.createElement("h5")
-                    document.getElementById("humidity").innerHTML = "";
-                    humid.textContent = data.main.humidity
-                    document.getElementById("humidity").append(humid)
+        // var Des = document.createElement("h5")
+        // document.getElementById("Des").innerHTML = "";
+        // Des.textContent = data.weather[0].description
+        // document.getElementById("Des").append(Des)
 
 
+        // var temp = document.createElement("h5")
+        // document.getElementById("temperature").innerHTML = "";
+        // temp.textContent = data.main.temp
+        // document.getElementById("temperature").append(temp)
 
+        // var Feels = document.createElement("h5")
+        // document.getElementById("feels_like").innerHTML = "";
+        // Feels.textContent = data.main.feels_like
+        // document.getElementById("feels_like").append(Feels)
 
-                })
-        }
-    })
+        // var wind = document.createElement("h5")
+        // document.getElementById("wind").innerHTML = "";
+        // wind.textContent = data.wind.speed
+        // document.getElementById("wind").append(wind)
+
+        // var humid = document.createElement("h5")
+        // document.getElementById("humidity").innerHTML = "";
+        // humid.textContent = data.main.humidity
+        // document.getElementById("humidity").append(humid)
+      })
 }
-
 // forecast information
 var getForecast = function (searchValue) {
     var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=${apiKey}&units=imperial`;
@@ -226,3 +203,8 @@ var getForecast = function (searchValue) {
             }
         });
 };
+
+
+spinButton.addEventListener('click', getCity)
+
+getCity();
