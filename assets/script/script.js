@@ -2,7 +2,7 @@ var h1Name = document.getElementById('city-name');
 var imgCity = document.getElementById('city-image');
 var spinButton = document.getElementById('spin-btn');
 var storageContainer = document.getElementsByClassName('storage-container');
-var buttonEl = document.querySelector("#spinMe");
+
 
 // get random city from api
 function getCity() {
@@ -129,7 +129,7 @@ function renderCityStorage() {
 getCity();
 
 // spin animation code
-
+var buttonEl = document.querySelector("#spinMe");
 buttonEl.addEventListener("click", function(){
 
   var aniEl = document.getElementById("animation");
