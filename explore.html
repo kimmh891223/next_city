@@ -1,184 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>randCity Generator | explore</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="./assets/style/style.css">
-     
-</head>
-<body>
 
-    <nav class="navbar">
-        <div class="container-fluid">g
-          <div class="navbar-header">
-            <div class="text-center">
-            <h1>randomCity</h1>
-            </div></div>
+</head>
+
+<body id="exploreHTML">
+
+  <nav class="navbar">
+    <div class="container-fluid">g
+      <div class="navbar-header">
+        <div class="text-center">
+          <h1>randomCity</h1>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
   <main>
-    
+
     <section id="cityName">
       <h1 id="city-name">City Name</h1>
     </section>
 
 
-   <section id="cityinfo"> 
-    <div class="container-fluid">
-    <section class="row">
-      <div class="col-sm-12 col-md-6">
-        <div class="weather">
-            <h3>Weather in your random city</h3>
+    <section id="cityinfo">
+      <div class="container-fluid">
+        <section class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="weather">
+              <h3>Weather in your random city</h3>
 
-            <div class="leftside d-flex">
-                <!-- Search bar -->
-                <!--<div class="form">
-                    <label for="city-input"><b>Search for a City:</b></label>
-                    <input type="text" class="form-control" id="city-input" placeholder="San Diego">
-                    <button class="btn btn-primary btn-lg btn-block" id="search-btn">Search<i
-                            class="fas fa-search"></i></button>-->
-                    <!-- Current Weather Information -->
-                    <div class="city">
-                        <div class="currentWeather p-0">
-                            <div class="d-flex cityName">
-                                <h2 id="city"></h2>
-                                <h3 id="date"></h3>
-                                <img id="weather-icon" />
-                            </div>
-                            <p class="pt-1 pl-2">Overall, there is</p>
-                                <span id="Des"></span>
-                            </p>
+              <div class="leftside d-flex">
+                <!-- Current Weather Information -->
+                <div class="city">
+                  <div class="currentWeather p-0">
+                    <div class="d-flex cityName">
+                      <h2 id="city"></h2>
+                      <h3 id="date"></h3>
+                      <img id="weather-icon" />
+                    </div>
+                    <p class="pt-1 pl-2">Overall, there is</p>
+                    <span id="Des"></span>
+                    </p>
 
 
-                            <p class="pt-1 pl-2">Temp: <span id="temperature"></span> &degF</p>
-                            <p class="pt-1 pl-2">Feels like: <span id="feels_like"></span> &degF</p>
-                            <p class="pl-2">Wind: <span id="wind"></span> MPH </p>
-                            <p class="pl-2">Humidity: <span id="humidity"></span> %</p>
-                        </div>
-                    </div>   
+                    <p class="pt-1 pl-2">Temp: <span id="temperature"></span> &degF</p>
+                    <p class="pt-1 pl-2">Feels like: <span id="feels_like"></span> &degF</p>
+                    <p class="pl-2">Wind: <span id="wind"></span> MPH </p>
+                    <p class="pl-2">Humidity: <span id="humidity"></span> %</p>
+                  </div>
                 </div>
-                <div></div>
-                <section class="col-10 fiveDay">
-                    <h2>5-Day Forecast:</h2>
-                    <div class="row">
+              </div>
+              <div></div>
+              <section class="col-10 fiveDay">
+                <h2>5-Day Forecast:</h2>
+                <div class="row">
 
-                        <div class="col-12">
-                            <div class="card day-0">
-                                <div class="card-body p-1">
-                                    <p class="card-title" id="date1"></p>
-                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
-                                    <p class="card-subtitle mb-2 text-muted"> Temp: <span class="fiveDay-temp1"></span>
-                                        &deg;F </p>
-                                    <p class="card-subtitle mb-2 text-muted"> Wind: <span class="fiveDay-wind1"></span>
-                                        MPH </p>
-                                    <p class="card-subtitle mb-2 text-muted"> Humidity: <span
-                                            class="fiveDay-humid1"></span>%
-                                    </p>
-                                </div>
-                            </div>
+                  <div class="col-12">
+                    <div class="card day-0">
+                      <div class="card-body p-1">
+                        <p class="card-title" id="date1"></p>
+                        <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                        <p class="card-subtitle mb-2 text-muted"> Temp: <span class="fiveDay-temp1"></span>
+                          &deg;F </p>
+                        <p class="card-subtitle mb-2 text-muted"> Wind: <span class="fiveDay-wind1"></span>
+                          MPH </p>
+                        <p class="card-subtitle mb-2 text-muted"> Humidity: <span class="fiveDay-humid1"></span>%
+                        </p>
+                      </div>
+                    </div>
 
-                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
-                            <div class="card day-1">
-                                <div class="card-body p-1">
-                                    <p class="card-title" id="date2"></p>
-                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
-                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp2"></span>
-                                        &deg;F </p>
-                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind2"></span>
-                                        MPH </p>
-                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                            class="fiveDay-humid2"></span>%
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                      <div class="card day-1">
+                        <div class="card-body p-1">
+                          <p class="card-title" id="date2"></p>
+                          <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                          <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp2"></span>
+                            &deg;F </p>
+                          <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind2"></span>
+                            MPH </p>
+                          <p class="card-subtitle mb-2 text-muted">Humidity: <span class="fiveDay-humid2"></span>%
+                          </p>
                         </div>
+                      </div>
+                    </div>
 
-                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
-                            <div class="card day-2">
-                                <div class="card-body p-1">
-                                    <p class="card-title" id="date3"></p>
-                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
-                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp3"></span>
-                                        &deg;F </p>
-                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind3"></span>
-                                        MPH </p>
-                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                            class="fiveDay-humid3"></span>%
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                      <div class="card day-2">
+                        <div class="card-body p-1">
+                          <p class="card-title" id="date3"></p>
+                          <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                          <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp3"></span>
+                            &deg;F </p>
+                          <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind3"></span>
+                            MPH </p>
+                          <p class="card-subtitle mb-2 text-muted">Humidity: <span class="fiveDay-humid3"></span>%
+                          </p>
                         </div>
+                      </div>
+                    </div>
 
-                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
-                            <div class="card day-3">
-                                <div class="card-body p-1">
-                                    <p class="card-title" id="date4"></p>
-                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
-                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp4"></span>
-                                        &deg;F </p>
-                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind4"></span>
-                                        MPH </p>
-                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                            class="fiveDay-humid4"></span>
-                                        %
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                      <div class="card day-3">
+                        <div class="card-body p-1">
+                          <p class="card-title" id="date4"></p>
+                          <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                          <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp4"></span>
+                            &deg;F </p>
+                          <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind4"></span>
+                            MPH </p>
+                          <p class="card-subtitle mb-2 text-muted">Humidity: <span class="fiveDay-humid4"></span>
+                            %
+                          </p>
                         </div>
+                      </div>
+                    </div>
 
-                        <div class="col-sm-10 col-md-4 col-lg-2 p-1">
-                            <div class="card day-4">
-                                <div class="card-body p-1">
-                                    <p class="card-title" id="date5"></p>
-                                    <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
-                                    <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp5"></span>
-                                        &deg;F </p>
-                                    <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind5"></span>
-                                        MPH </p>
-                                    <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                            class="fiveDay-humid5"></span>%
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="col-sm-10 col-md-4 col-lg-2 p-1">
+                      <div class="card day-4">
+                        <div class="card-body p-1">
+                          <p class="card-title" id="date5"></p>
+                          <img src="weather02-512.webp" height=20px width=20px id="weather-icon" />
+                          <p class="card-subtitle mb-2 text-muted">Temp: <span class="fiveDay-temp5"></span>
+                            &deg;F </p>
+                          <p class="card-subtitle mb-2 text-muted">Wind: <span class="fiveDay-wind5"></span>
+                            MPH </p>
+                          <p class="card-subtitle mb-2 text-muted">Humidity: <span class="fiveDay-humid5"></span>%
+                          </p>
                         </div>
-                    </div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
             </div>
-        </div>
+          </div>
         </section>
-        </div>
+      </div>
 
-        </div>
-    </div>
-      <div class="col-sm-12 col-md-6"> 
-        <div class="hotels">
-            <h3>Accomodations in your random city</h3>
-
-        </div>
-    </div>
-    </div>
+      </div>
+      </div>
+      <section>
+        <div id="infoList"></div>
+      </section>
+      </div>
     </section>
 
 
     <section id="spinagain">
-        <a class="btn btn-primary explore" href="/index.html" id="spin-btn" role="button">Spin again</a>
-</section>
+      <a class="btn btn-primary explore" href="/index.html" id="spin-btn" role="button">Spin again</a>
+    </section>
 
   </main>
 
-<!-- <footer class="container-fluid text-center">
+  <!-- <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer> -->
-<script src="/assets/script/script.js"></script>
+  <script src="/assets/script/script.js"></script>
 </body>
+
 </html>
