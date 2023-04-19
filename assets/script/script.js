@@ -4,6 +4,13 @@ var spinButton = document.getElementById('spin-btn');
 var storageContainer = document.getElementsByClassName('storage-container');
 var exploreCityBtn = document.getElementById('explorebtn')
 var apiKey = 'c36e92a6ba7d753715bfc90e32631c4e';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '9b263f569amshba731ad5fc34b0ap196c9bjsn10d532f596cc',
+		'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
+	}
+};
 
 // get random city from api
 function getCity() {
@@ -222,17 +229,92 @@ var getForecast = function (searchValue) {
   })
 };
 
+
+
+// booking api
+
+// Finds the destination ID for desired City
+function hotelCity(cityName) { 
+  var cityURL = `https://booking-com.p.rapidapi.com/v1/hotels/locations?name=${cityName} &locale=en-gb`;
+  fetch (cityURL, options)
+  .then(function (response) {
+    if (!response.ok) {
+      throw response.json();
+    }
+    return response.json();
+  })
+  .then(function (data) { 
+    var dest_id = data[0].dest_id;
+    console.log(data);
+    hotelBooking(dest_id);
+  })
+}
+
+// Using Destination ID will output 8 results of hotels near city location
+function hotelBooking(city) { 
+  var hotelURL = `https://booking-com.p.rapidapi.com/v1/hotels/search?checkin_date=2023-09-27&dest_type=city&units=metric&checkout_date=2023-09-28&adults_number=2&order_by=popularity&dest_id=${city}&filter_by_currency=AED&locale=en-gb&room_number=1&children_number=2&children_ages=5%2C0&categories_filter_ids=class%3A%3A2%2Cclass%3A%3A4%2Cfree_cancellation%3A%3A1&page_number=0&include_adjacency=true`;
+  fetch(hotelURL, options)
+  .then(function (response) {
+    if (!response.ok) {
+      throw response.json();
+    }
+    return response.json();
+  })  
+  .then(function (data) { 
+    for(var i = 0; i < 8; i++) {
+
+      var infoList = document.getElementById("infoList");
+
+      var hotelName = document.createElement('p');
+      hotelName.setAttribute("id", "hotelName");
+      hotelName.setAttribute("style", "font-size: 30px; font-weight: 600")
+      infoList.appendChild(hotelName);
+
+      var hotelImg = document.createElement('img');
+      hotelImg.setAttribute("id", "image");
+      infoList.appendChild(hotelImg);
+
+      var hotelAddr = document.createElement('p');
+      hotelAddr.setAttribute("id", "hotelAddr");
+      infoList.appendChild(hotelAddr);
+
+      var reviewScore = document.createElement('p');
+      reviewScore.setAttribute("id", "reviewScore");
+      infoList.appendChild(reviewScore);
+
+      var price = document.createElement("p");
+      price.setAttribute("id", "price");
+      infoList.appendChild(price);
+
+      var hotelUrl = document.createElement('a');
+      hotelUrl.setAttribute("id","hotelUrL");
+      infoList.appendChild(hotelUrl);
+
+      console.log(data);
+      
+      hotelImg.setAttribute("style", 'width: 400px');
+      hotelImg.setAttribute("src", data.result[i].max_photo_url);
+      hotelName.innerHTML = data.result[i].hotel_name;
+      hotelAddr.innerHTML = data.result[i].address + ", " + data.result[i].city;
+      hotelUrl.innerHTML = data.result[i].url;
+      hotelUrl.setAttribute("href", data.result[i].url);
+      reviewScore.innerHTML = "Review Score: " + data.result[i].review_score;
+      price.innerHTML = "All Inclusive Price: " + data.result[i].price_breakdown.gross_price + " " + data.result[i].price_breakdown.currency;
+    }
+  })
+}
+
 // Handles the functions when page loads explore html
 function handleExplore() { 
   var pickedCity = getCityStorage();
   h1Name.textContent = pickedCity;
   getWeatherInfo(pickedCity)
   getForecast(pickedCity)
+  hotelCity(pickedCity)
 }
 
 // Handles the search History
 function handleRecentSearch(e) { 
-  console.log(e.target.dataset.URL)
   if(e.target.dataset.URL) {
     var city = e.target.textContent;
     setCityStorage(city);
