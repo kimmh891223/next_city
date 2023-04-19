@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    background-color: rgb(255, 239, 168);
+}
+
+  
+.navbar {
+  margin: 0 0 20px 0;
+  padding: 40px;
+  background-color: black;
+  width: 100%;
+  justify-content: center;
+}
+
+
+h1 {
+  font-size: 54px;
+  font-family: 'Neucha', cursive;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 34px;
+  font-family: 'Neucha', cursive;
+  color: #ff004c;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.info-section  {
+ margin: 60px;
+ padding: 20px;
+ background-color: rgba(0, 128, 255, 0.2);
+ border-radius: 4px;
+
+}
+
+
+.banner-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.randomButton {
+  justify-content: center;
+  background-color: rgb(0, 122, 57);
+  border-radius: 4px;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition: all 0.5s ease-in-out;
+  width: 300px;
+  font-family: 'Neucha', cursive;
+  font-size: 44px;
+  margin-top: 60px;
+}
+
+.randomButton:hover {
+  -webkit-transform: scale(1.1);
+  background: #ff004c;
+}
+
+.about {
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #ff004c;
+  text-align: center;
+}
+
+.info {
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #5900ff;
+  text-align: center;
+}
+
+footer {
+  height: 50px;  
+  padding: 10px;
+  background-color: #ff004c;
+  width: 100%;
+  margin: 0;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
