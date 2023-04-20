@@ -12,6 +12,8 @@ const options = {
 	}
 };
 
+//? City API
+
 // get random city from api
 function getCity() {
   var search = 'https://api.teleport.org/api/urban_areas';
@@ -148,6 +150,8 @@ function renderCityStorage() {
   }
 }
 
+//? Weather API
+
 // Current weather information
 function getWeatherInfo(searchValue){
   var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${apiKey}&units=imperial`;
@@ -229,9 +233,7 @@ var getForecast = function (searchValue) {
   })
 };
 
-
-
-// booking api
+//? Booking API
 
 // Finds the destination ID for desired City
 function hotelCity(cityName) { 
@@ -245,7 +247,6 @@ function hotelCity(cityName) {
   })
   .then(function (data) { 
     var dest_id = data[0].dest_id;
-    console.log(data);
     hotelBooking(dest_id);
   })
 }
@@ -290,8 +291,6 @@ function hotelBooking(city) {
       hotelUrl.setAttribute("id","hotelUrL");
       infoList.appendChild(hotelUrl);
 
-      console.log(data);
-      
       hotelImg.setAttribute("style", 'width: 400px');
       hotelImg.setAttribute("src", data.result[i].max_photo_url);
       hotelName.innerHTML = data.result[i].hotel_name;
@@ -331,6 +330,7 @@ if (document.location.pathname === '/explore.html') {
 
 // Renders only when user is in the correct html
 if (document.location.pathname === '/random.html') {
+  getCity();
   renderCityStorage();
 }
 
