@@ -1,14 +1,19 @@
 # Random City Generator Project
 
+
 ## About the Application
-The purpose of this application is to generate the random city upon the request of the user. The button on the main page triggers the proccess
+The purpose of this application is to generate the random city upon the request of the user. The button on the main page triggers the proccess.
 of generating random city. Further more, if the user is interested in randomly selected city, then the user is provided with pages for weather and hotel booking.
 The weather page will provide the user with weather forcasting for a whole week with a daily breakdown by date. The booking page will provide the list of avaliable hotels and also a link to booking.com website, where the user
 will be able to book a disered hotel.
 
+
 ## Functionality
 
+
 ### Random city generator
+
+This is the function of the main page of our app and it provides the user with a city of random choice, leveraging teleport.org api of a pool of cities. All the user is required to do is click the button spin and this will start the function. If the user is not satisfied with the random choice, he can click the button again and the new city will be chosen for a user.
 
 1. We used teleport.org api to retrtieve data for our city pool with a getCity function. 
 
@@ -25,26 +30,24 @@ will be able to book a disered hotel.
 7. spin button starts the function on click.
 
 
-SHOULD WE ADD SCREENSHOTS OF THE CODE?!?!
-
-
-### Weather forcasting
-
-1. We use querySelector to input the city and apply it in the next function.
-
-2. getWeatherInfo function leverages API to retrieve information on current weather in the searched city.
-
-3. getForecast function provides the user with the weather forecast for the whole, next week.
-
-
 ### Travel Info
 
-1. querySelector is used to retrieve the data after the user clicks the submit button.
+Here, the user is provided with a hotel information of the chosen city. This page shows a list of hotels and re-directs the user to booking.com website, where the user will be able to make booking of a desired accomodation.
 
-2. Then on click, the program starts the function requestData that uses if statement with alert to ask the user for data and provide with the relevant answer in response.
+1. var cityName is used for a chosen city.
 
-3. Following that, the program leverages API to retrieve the data on hotels, based on a city choice and provide with a hotel from booking.com
+2. hotelInfo function uses for loop to go and variable infoList to go through the list of hotels and provide the user with the result of 8 hotels, and also display to the user name, price, address, image and url for each of those hotels.
 
-BULLET POINT STRUCTURE, OR BLOCKS OF TEXT?!?!
+
+### Weather Forcasting
+
+This page hosts a weather dashboard, where the user can check out a local weather of a chosen city, along with a weather forcasting up to 5 days. From functional perspective, the weather information page consits of:
+
+1. current weather info:
+getWeatherInfo function fetches an api provided in apiUrl, uses data from it to then render to the user on the page data such as: destination, current temperature, feels like temperature etc.
+
+2. getForecast:
+function leverages the same api to provide the user with the weather forecast for five days, using for loop.
+
 
 HOMEPAGE SCREENSHOT WILL GO HERE:
