@@ -9,11 +9,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     text-align: center;
-    background-color: rgb(255, 239, 168);
+    background-image: linear-gradient(90deg, #84a37f 4.55%, #6a8a65 4.55%, #6a8a65 9.09%, #98924b 9.09%, #98924b 13.64%, #b4b07f 13.64%, #b4b07f 18.18%, #c88b5c 18.18%, #c88b5c 22.73%, #ca834d 22.73%, #ca834d 27.27%, #b24251 27.27%, #b24251 31.82%, #b1616c 31.82%, #b1616c 36.36%, #824295 36.36%, #824295 40.91%, #9b70a8 40.91%, #9b70a8 45.45%, #74a6ae 45.45%, #74a6ae 50%, #84a37f 50%, #84a37f 54.55%, #6a8a65 54.55%, #6a8a65 59.09%, #98924b 59.09%, #98924b 63.64%, #b4b07f 63.64%, #b4b07f 68.18%, #c88b5c 68.18%, #c88b5c 72.73%, #ca834d 72.73%, #ca834d 77.27%, #b24251 77.27%, #b24251 81.82%, #b1616c 81.82%, #b1616c 86.36%, #824295 86.36%, #824295 90.91%, #9b70a8 90.91%, #9b70a8 95.45%, #74a6ae 95.45%, #74a6ae 100%);
+    background-size: 1760.00px 1760.00px; 
 }
 
-  
-.navbar {
+.fixed-header {
+  display: flex;
   margin: 0 0 20px 0;
   padding: 40px;
   background-color: black;
@@ -21,36 +22,62 @@ body {
   justify-content: center;
 }
 
+.container-fluid {
+  text-align: center;
+  
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(65, 65, 65);
+}
+
+.ondark {
+  color: white;
+
+}
 
 h1 {
   font-size: 54px;
   font-family: 'Neucha', cursive;
   color: white;
   text-align: center;
+  text-shadow: 1px 1px 22px #ebcef4, 0 0 25px #fceeb6, 0 0 5px #98924b;
 }
 
 h2 {
   font-size: 34px;
   font-family: 'Neucha', cursive;
-  color: #ff004c;
+  color: #74a6ae;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 34px;
   font-family: 'Neucha', cursive;
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.info-section  {
- margin: 60px;
- padding: 20px;
- background-color: rgba(0, 128, 255, 0.2);
- border-radius: 4px;
+h4 {
+  font-family: 'Neucha', cursive;
+  font-size: 18px;
+  color: white;
+}
 
+.info-section  {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 800px;
 }
 
 .banner {
@@ -61,15 +88,19 @@ h3 {
   border-radius: 4px;
   max-width: 800px;
   width: 100%;
+  margin-top: 40px;
 }
 
-.banner-container {
+.outer-container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.hide {
+  display: none;
+}
 .explore {
   margin-top: 40px;
   width: 200px;
@@ -80,12 +111,10 @@ h3 {
 }
 
 
-#city-name {
-  color:rgba(0, 52, 104)
-}
+
 .randomButton {
   justify-content: center;
-  background-color: rgb(0, 122, 57);
+  background-color:#6a8a65;
   border-radius: 4px;
   box-shadow: 0 0 1px #ccc;
   -webkit-transition: all 0.5s ease-in-out;
@@ -97,45 +126,63 @@ h3 {
 
 .randomButton:hover {
   -webkit-transform: scale(1.1);
-  background: #ff004c;
+  background: #b1616c;
 }
 
-.about {
-  border: 1px solid black;
-  border-radius: 4px;
-  background-color: #ff004c;
-  text-align: center;
-}
-
-.info {
-  border: 1px solid black;
-  border-radius: 4px;
-  background-color: #5900ff;
-  text-align: center;
-}
 
 .weather {
-  background-color: rgb(0, 174, 255);
+  background-color: #9b70a8;
   border-radius: 4px;
   padding: 40px;
+  color: white;
 
+}
+
+.contain-info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .hotels {
-  background-color: rgb(0, 48, 206);
+  background-color:#ca834d;
   border-radius: 4px;
   padding: 40px;
 }
 
-footer {
-  height: 50px;  
-  padding: 10px;
-  background-color: #ff004c;
-  width: 100%;
-  margin: 0;
+.city-image {
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
-footer p {
-  text-align: center;
-  color: white;
+
+#temperature,
+#humidity,
+#wind,
+#feels_like,
+#Des {
+    display: inline-block;
+}
+
+.fiveDay-temp1,
+.fiveDay-wind1,
+.fiveDay-humid1,
+.fiveDay-temp2,
+.fiveDay-wind2,
+.fiveDay-humid2,
+.fiveDay-temp3,
+.fiveDay-wind3,
+.fiveDay-humid3,
+.fiveDay-temp4,
+.fiveDay-wind4,
+.fiveDay-humid4,
+.fiveDay-temp5,
+.fiveDay-wind5,
+.fiveDay-humid5 {
+    display: inline-block;
+}
+
+
+footer {
+  height: 60px;
 }
