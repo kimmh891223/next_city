@@ -80,6 +80,9 @@ h4 {
     max-width: 800px;
 }
 
+ul {
+  list-style-type: none;
+}
 .banner {
   background-image: url('/assets/img/maps.jpg');
   background-position: center center;
