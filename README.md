@@ -2,6 +2,7 @@
 
 
 ## About the Application
+
 The purpose of this application is to generate the random city upon the request of the user. The button on the main page triggers the proccess.
 of generating random city. Further more, if the user is interested in randomly selected city, then the user is provided with pages for weather and hotel booking.
 The weather page will provide the user with weather forcasting for a whole week with a daily breakdown by date. The booking page will provide the list of avaliable hotels and also a link to booking.com website, where the user
@@ -27,7 +28,7 @@ This is the function of the main page of our app and it provides the user with a
 
 6. for loop iterates through all items in the array and renders them to the page.
 
-7. spin button starts the function on click.
+7. spin button launches the function on click.
 
 
 ### Travel Info
