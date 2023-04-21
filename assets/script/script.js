@@ -13,7 +13,7 @@ const options = {
 };
 
 //? City API
-
+ 
 // get random city from api
 function getCity() {
   var search = 'https://api.teleport.org/api/urban_areas';
