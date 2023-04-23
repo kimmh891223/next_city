@@ -1,3 +1,5 @@
+/* Global styles */
+
 *,
 *::before,
 *::after {
@@ -113,7 +115,7 @@ ul {
   background-color: #ff004c;
 }
 
-
+/*Buttons*/
 
 .randomButton {
   justify-content: center;
@@ -132,6 +134,7 @@ ul {
   background: #b1616c;
 }
 
+/* API */
 
 .weather {
   background-color: #9b70a8;
