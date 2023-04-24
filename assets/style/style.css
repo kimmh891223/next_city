@@ -86,7 +86,7 @@ ul {
   list-style-type: none;
 }
 .banner {
-  background-image: url('/assets/img/maps.jpg');
+  background-image: url('./assets/img/maps.jpg');
   background-position: center center;
   height: 300px; 
   border: 1px solid black;
