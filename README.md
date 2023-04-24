@@ -24,15 +24,15 @@ File can used and shared to for knowledge expansion or usage as needed.
 
 APIs:
 
-booking.com (https://developers.teleport.org/api/resources/UrbanArea/)
-Urban Area Resource (https://developers.teleport.org/api/resources/UrbanArea/)
-Open Weather (https://openweathermap.org/api)
-Stock Photos (https://www.pexels.com/)
+- booking.com (https://developers.teleport.org/api/resources/UrbanArea/)
+- Urban Area Resource (https://developers.teleport.org/api/resources/UrbanArea/)
+- Open Weather (https://openweathermap.org/api)
+- Stock Photos (https://www.pexels.com/)
 
 ## License
 
-- GitHub repository URL: https://kimmh891223.github.io/next_city/
-- GitHub Page: https://github.com/kimmh891223/next_city/
+- GitHub repository URL: https://github.com/kimmh891223/next_city/
+- GitHub Page: https://kimmh891223.github.io/next_city/
 - License: license.txt
 
 
