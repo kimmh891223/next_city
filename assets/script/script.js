@@ -163,7 +163,7 @@ function getWeatherInfo(searchValue){
     return response.json();
     })
   .then (function (data) {
-    if(document.location.pathname === './explore.html') {
+    if(document.location.pathname === '/explore.html') {
       var Des = document.createElement("h5")
       document.getElementById("Des").innerHTML = "";
       Des.textContent = data.weather[0].description
@@ -205,7 +205,7 @@ var getForecast = function (searchValue) {
     return response.json();
   })
   .then (function (data) { 
-    if(document.location.pathname === './explore.html') {
+    if(document.location.pathname === '/explore.html') {
       for (var i = 0; i < 5; i++) {
         var forecast = data.list[i * 8];
 
@@ -324,16 +324,15 @@ function handleRecentSearch(e) {
 spinButton.addEventListener('click', getCity)
 
 // adds onload to explore html
-if (document.location.pathname === './explore.html') {
+if (document.location.pathname === '/explore.html') {
   document.getElementById("exploreHTML").onload = function() {handleExplore()};
 }
 
 // Renders only when user is in the correct html
-if (document.location.pathname === './random.html') {
+if (document.location.pathname === '/random.html') {
   getCity();
   renderCityStorage();
 }
 
 // Adds eventlistener to search history
 document.addEventListener('click', handleRecentSearch);
-
