@@ -1,3 +1,5 @@
+/* Global styles */
+
 *,
 *::before,
 *::after {
@@ -84,7 +86,7 @@ ul {
   list-style-type: none;
 }
 .banner {
-  background-image: url('/assets/img/maps.jpg');
+  background-image: url('./assets/img/maps.jpg');
   background-position: center center;
   height: 300px; 
   border: 1px solid black;
@@ -99,7 +101,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+}   
 
 .hide {
   display: none;
@@ -113,7 +115,7 @@ ul {
   background-color: #ff004c;
 }
 
-
+/*Buttons*/
 
 .randomButton {
   justify-content: center;
@@ -132,6 +134,7 @@ ul {
   background: #b1616c;
 }
 
+/* API */
 
 .weather {
   background-color: #9b70a8;

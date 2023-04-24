@@ -7,7 +7,7 @@ var apiKey = 'c36e92a6ba7d753715bfc90e32631c4e';
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '9b263f569amshba731ad5fc34b0ap196c9bjsn10d532f596cc',
+		'X-RapidAPI-Key': 'd947a1f344msh8365c2f20c87d2ep135d27jsn21ccbc37ec42',
 		'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
 	}
 };
@@ -53,7 +53,7 @@ function getCity() {
     // Renders Local storage to webpage
     renderCityStorage();
   })
-}
+}   
 
 // get City Details of select city
 function getCityDetails(city) {
