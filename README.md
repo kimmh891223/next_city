@@ -31,8 +31,8 @@ Stock Photos (https://www.pexels.com/)
 
 ## License
 
-- GitHub repository URL: https://github.com/cherah-petra/CP-Code-Quiz-C04
-- GitHub Page: https://cherah-petra.github.io/CP-Code-Quiz-C04/
+- GitHub repository URL: https://kimmh891223.github.io/next_city/
+- GitHub Page: https://github.com/kimmh891223/next_city/
 - License: license.txt
 
 
