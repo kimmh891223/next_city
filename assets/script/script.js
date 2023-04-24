@@ -53,7 +53,7 @@ function getCity() {
     // Renders Local storage to webpage
     renderCityStorage();
   })
-}
+}   
 
 // get City Details of select city
 function getCityDetails(city) {
